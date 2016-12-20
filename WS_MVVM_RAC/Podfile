@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+use_frameworks!
+target 'WS_MVVM_RAC' do
+
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'ReactiveCocoa', '~> 2.5'
+end
