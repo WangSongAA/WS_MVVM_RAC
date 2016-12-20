@@ -1,0 +1,6 @@
+framework module Pods_WS_MVVM_RAC {
+  umbrella header "Pods-WS_MVVM_RAC-umbrella.h"
+
+  export *
+  module * { export * }
+}
