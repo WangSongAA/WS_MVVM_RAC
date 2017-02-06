@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MVVMViewModel : NSObject
-@property (nonatomic, strong) RACCommand *refreshDataCommand;
-@property (nonatomic, strong) RACCommand *nextPageCommand;
+@property (nonatomic, strong) RACCommand *refreshDataCommand;//刷新
+@property (nonatomic, strong) RACCommand *nextPageCommand;//加载
 @end

@@ -36,8 +36,11 @@
     self.viewModel = [[MVVMViewModel alloc]init];
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [[self.viewModel.refreshDataCommand execute:nil] subscribeNext:^(id x) {
-            [_dataSource removeAllObjects];
             [weakSelf.tableView.mj_header endRefreshing];
+             [weakSelf.tableView.mj_footer resetNoMoreData];
+            if (self.dataSource.count > 0) {
+                [self.dataSource removeAllObjects];
+            }
             [self.dataSource  addObjectsFromArray:x];
             [self.tableView reloadData];
         }];

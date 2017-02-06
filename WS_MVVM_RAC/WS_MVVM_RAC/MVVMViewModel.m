@@ -22,11 +22,11 @@
 - (RACCommand *)refreshDataCommand {
     if (!_refreshDataCommand) {
        
-        self.currentPage = 1;
+        
         _refreshDataCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
           
             RACSignal *requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                
+                self.currentPage = 1;
                 NSString *url = nil;
                 url = [NSString  stringWithFormat:@"http://mobile.ximalaya.com/m/explore_user_list?category_name=all&condition=hot&device=android&page=%ld&per_page=20", _currentPage];
                 AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -36,6 +36,7 @@
                     [subscriber sendNext:responseObject];
                     // 发送信号完成 并取消订阅1
                     [subscriber sendCompleted];
+                     self.currentPage = 2;
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     NSLog(@"%@", error);
                 }];
@@ -63,7 +64,6 @@
         _nextPageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             
             RACSignal *requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                _currentPage ++;
                 NSString *url = nil;
                 url = [NSString  stringWithFormat:@"http://mobile.ximalaya.com/m/explore_user_list?category_name=all&condition=hot&device=android&page=%ld&per_page=20", _currentPage];
                 AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -73,6 +73,7 @@
                     [subscriber sendNext:responseObject];
                     // 发送信号完成 并取消订阅1
                     [subscriber sendCompleted];
+                    self.currentPage ++;
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     NSLog(@"%@", error);
                 }];
