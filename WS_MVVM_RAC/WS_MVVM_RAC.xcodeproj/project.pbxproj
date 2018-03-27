@@ -154,7 +154,7 @@
 				TargetAttributes = {
 					5413EFA61E08C9A1004EB012 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 24R84H29YZ;
+						DevelopmentTeam = BNQ488JZU4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -369,7 +369,7 @@
 			baseConfigurationReference = 52B883E3DC08A4FD619695F6 /* Pods-WS_MVVM_RAC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24R84H29YZ;
+				DEVELOPMENT_TEAM = BNQ488JZU4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WS_MVVM_RAC/MVVM.pch";
 				INFOPLIST_FILE = WS_MVVM_RAC/Info.plist;
@@ -384,7 +384,7 @@
 			baseConfigurationReference = 671661226F10F61519C42DA4 /* Pods-WS_MVVM_RAC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24R84H29YZ;
+				DEVELOPMENT_TEAM = BNQ488JZU4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WS_MVVM_RAC/MVVM.pch";
 				INFOPLIST_FILE = WS_MVVM_RAC/Info.plist;
