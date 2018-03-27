@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MVVM_RAC";
+#pragma mark 分支1
     __weak typeof(self)weakSelf = self;
     self.automaticallyAdjustsScrollViewInsets = YES;
     [self.view addSubview:self.tableView];
@@ -96,7 +97,6 @@
     }
     return _tableView;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
