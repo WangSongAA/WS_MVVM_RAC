@@ -29,6 +29,7 @@
     [super viewDidLoad];
     self.title = @"MVVM_RAC";
 #pragma mark 分支1
+    //分支1111
     __weak typeof(self)weakSelf = self;
     self.automaticallyAdjustsScrollViewInsets = YES;
     [self.view addSubview:self.tableView];
